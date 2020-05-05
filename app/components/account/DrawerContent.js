@@ -14,7 +14,7 @@ import {
 } from "react-native-paper";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-export function AccountProfile(props) {
+export function DrawerContent(props) {
   return (
     <DrawerContentScrollView {...props}>
       <View style={styles.AccountProfile}>
