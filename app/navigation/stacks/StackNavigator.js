@@ -6,6 +6,7 @@ import { Appbar, Avatar, useTheme } from "react-native-paper";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import { Detail } from "./Detail";
+import { BottomTabs } from "../bottomTabs";
 
 const Stack = createStackNavigator();
 
@@ -74,6 +75,17 @@ export const StackNavigator = () => {
         },
       }}
     >
+      <Stack.Screen
+        name="Feed"
+        component={BottomTabs}
+        options={({ route }) => {
+          console.log("!@# options", { route });
+          const routeName = route.state
+            ? route.state.routes[route.state.index].name
+            : "Feed";
+          return { headerTitle: routeName };
+        }}
+      />
       <Stack.Screen
         name="Details"
         component={Detail}
