@@ -6,8 +6,9 @@ import { useSafeArea } from "react-native-safe-area-context";
 import { useIsFocused, RouteProp } from "@react-navigation/native";
 
 import overlay from "../context/overlay";
-import { Feed } from "./stacks/Feed";
-import { Detail } from "./stacks/Detail";
+import { Feed } from "../components/Feed";
+import Notification from "../components/Notification";
+import { Detail } from "../components/Detail";
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -51,7 +52,7 @@ export const BottomTabs = () => {
         />
         <Tab.Screen
           name="Notifications"
-          component={Feed}
+          component={Notification}
           options={{
             tabBarIcon: "bell-outline",
             tabBarColor,

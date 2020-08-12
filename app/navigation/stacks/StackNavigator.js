@@ -5,7 +5,7 @@ import { DrawerNavigationProp } from "@react-navigation/drawer";
 import { Appbar, Avatar, useTheme } from "react-native-paper";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-import { Detail } from "./Detail";
+import { Detail } from "../../components/Detail";
 import { BottomTabs } from "../bottomTabs";
 
 const Stack = createStackNavigator();
